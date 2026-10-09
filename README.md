@@ -18,7 +18,17 @@ brew install --cask pyhttp2/pyhttp/pyhttp
 xattr -dr com.apple.quarantine /Applications/pyhttp.app
 ```
 
-The last line removes the quarantine flag so macOS does not show the "Apple could not verify" dialog (shown for apps that are not notarized with Apple). Later updates: `brew upgrade --cask pyhttp`, then run the `xattr` line again.
+The last line removes the quarantine flag so macOS does not show the "Apple could not verify" dialog (shown for apps that are not notarized with Apple).
+
+**Update** to the latest version:
+
+```sh
+brew update
+brew upgrade --cask pyhttp
+xattr -dr com.apple.quarantine /Applications/pyhttp.app
+```
+
+`brew info --cask pyhttp` shows the installed and the available version. Your data in `~/Library/Application Support/pyhttp` is kept across updates. The app also shows an **Update** button in its top bar when a newer release exists.
 
 **Manual**: download `pyhttp-<version>-macos-arm64.dmg`, open it and drag pyhttp to Applications. On first launch macOS says it cannot verify the app:
 
