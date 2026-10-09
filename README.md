@@ -14,10 +14,11 @@ Download `pyhttp-<version>-windows-x64.exe` and run it (one file, no install). S
 
 ```sh
 brew tap pyhttp2/pyhttp https://github.com/pyhttp2/pyhttp-releases
-brew install --cask --no-quarantine pyhttp2/pyhttp/pyhttp
+brew install --cask pyhttp2/pyhttp/pyhttp
+xattr -dr com.apple.quarantine /Applications/pyhttp.app
 ```
 
-`--no-quarantine` skips the "Apple could not verify" dialog that macOS shows for apps that are not notarized with Apple. Later updates: `brew upgrade --cask pyhttp`.
+The last line removes the quarantine flag so macOS does not show the "Apple could not verify" dialog (shown for apps that are not notarized with Apple). Later updates: `brew upgrade --cask pyhttp`, then run the `xattr` line again.
 
 **Manual**: download `pyhttp-<version>-macos-arm64.dmg`, open it and drag pyhttp to Applications. On first launch macOS says it cannot verify the app:
 
