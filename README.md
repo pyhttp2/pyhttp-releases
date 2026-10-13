@@ -1,16 +1,21 @@
 # pyhttp releases
 
-Download the latest pyhttp desktop app from the **Releases** page on the right.
+Download the latest pyhttp desktop app from the **Releases** page on the right, or from [pyhttp.com](https://pyhttp.com).
 
-pyhttp is a local, Postman-like HTTP client: requests, folders, environments, named bodies, tests, a collection runner, cookies, Postman import/export, and more. Everything stays on your machine.
+pyhttp is a local, Postman-like HTTP client: requests, folders, environments, named bodies, tests and scripts, a collection runner, cookies, Postman/OpenAPI/HAR import and more. Everything stays on your machine.
+
+**Free for everyone** under the pyhttp Free License 1.0 (`LICENSE.md` attached to each release): at home or at work, at a company of any size, for any purpose, with no fees, no seats and no registration. By downloading you accept that license. The source code is not published.
 
 ## Windows 10/11
 
-Download `pyhttp-<version>-windows-x64.exe` and run it (one file, no install). SmartScreen may show "Windows protected your PC": click **More info → Run anyway**.
+- **Installer** (recommended): `pyhttp-<version>-windows-x64-setup.exe`. Installs per user, no administrator rights, with a Start menu entry and an uninstaller. Updates install themselves from inside the app.
+- **Portable**: `pyhttp-<version>-windows-x64.exe`, one file, no install. It also updates itself in place.
+
+SmartScreen may show "Windows protected your PC" on first launch: click **More info → Run anyway**.
 
 ## macOS (Apple Silicon)
 
-**Homebrew** (recommended):
+**Homebrew** (recommended, updates install themselves from inside the app):
 
 ```sh
 brew tap pyhttp2/pyhttp https://github.com/pyhttp2/pyhttp-releases
@@ -20,27 +25,24 @@ xattr -dr com.apple.quarantine /Applications/pyhttp.app
 
 The last line removes the quarantine flag so macOS does not show the "Apple could not verify" dialog (shown for apps that are not notarized with Apple).
 
-**Update** to the latest version:
+**Manual**: download `pyhttp-<version>-macos-arm64.dmg`, open it and drag pyhttp to Applications. On first launch macOS says it cannot verify the app: click **Done** (not "Move to Trash"), open **System Settings → Privacy & Security**, scroll to the message about pyhttp and click **Open Anyway**. Or run the `xattr` command above.
+
+## Ubuntu 22.04+ / Debian 12+
 
 ```sh
-brew update
-brew upgrade --cask pyhttp
-xattr -dr com.apple.quarantine /Applications/pyhttp.app
+sudo apt install ./pyhttp-<version>-linux-amd64.deb
 ```
 
-`brew info --cask pyhttp` shows the installed and the available version. Your data in `~/Library/Application Support/pyhttp` is kept across updates. The app also shows an **Update** button in its top bar when a newer release exists.
+The package uses your distribution's GTK and WebKitGTK (pulled in as dependencies), adds `pyhttp` to the PATH and an entry to the app menu. Other distributions can run pyhttp from source with Python 3.10+ and the GTK webview bindings.
 
-**Manual**: download `pyhttp-<version>-macos-arm64.dmg`, open it and drag pyhttp to Applications. On first launch macOS says it cannot verify the app:
+## Updates
 
-1. Click **Done** (not "Move to Trash").
-2. Open **System Settings → Privacy & Security**, scroll down to the message about pyhttp and click **Open Anyway**, then confirm.
+pyhttp checks this repository for a newer release at start (and on **Check now** in Settings → About) and shows an **Update** button. The Windows installer, the portable `.exe` and a Homebrew install download the new version, verify it against `SHA256SUMS.txt` and install it, then pyhttp restarts. A `.dmg` or `.deb` install gets the download and the exact command to run. Your data (`%APPDATA%\pyhttp`, `~/Library/Application Support/pyhttp`, `~/.local/share/pyhttp`) is kept across updates.
 
-Or remove the quarantine flag in Terminal: `xattr -dr com.apple.quarantine /Applications/pyhttp.app`
+`SHA256SUMS.txt` on each release lists the checksums of all files.
 
 ## License
 
-Free for individuals and for schools (teaching and learning) under the pyhttp Personal and Education License 1.0.
-Companies, government bodies, research organizations and nonprofits need a commercial license: see `COMMERCIAL-LICENSE.md` attached to each release, or email dev@pyhttp.com.
-By downloading you accept the `EULA.md` attached to each release.
+pyhttp Free License 1.0: see `LICENSE.md` on each release. Bundled open-source components are listed in `THIRD-PARTY-NOTICES.md`. Questions: dev@pyhttp.com.
 
 Copyright (c) 2026 Vishvendra Singh. All rights reserved.
