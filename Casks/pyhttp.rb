@@ -1,6 +1,6 @@
 cask "pyhttp" do
-  version "0.1.7"
-  sha256 "2303c42f82eef5dcc6ae00acca66fd1a15e7db5c910cc6ee14cbf79736eec864"
+  version "0.1.8"
+  sha256 "9841c6e493d8d13ce0b9203b1d4a6475cefb6886fa4ea87dfd5db9f88fb615aa"
 
   url "https://github.com/pyhttp2/pyhttp-releases/releases/download/v#{version}/pyhttp-#{version}-macos-arm64.dmg"
   name "pyhttp"
