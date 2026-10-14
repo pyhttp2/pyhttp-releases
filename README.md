@@ -45,4 +45,4 @@ pyhttp checks this repository for a newer release at start (and on **Check now**
 
 pyhttp Free License 1.0: see `LICENSE.md` on each release. Bundled open-source components are listed in `THIRD-PARTY-NOTICES.md`. Questions: dev@pyhttp.com.
 
-Copyright (c) 2026 Vishvendra Singh. All rights reserved.
+Copyright (c) 2026 pyhttp Dev Team. All rights reserved.
