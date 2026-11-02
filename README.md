@@ -40,7 +40,7 @@ Or through Homebrew (macOS Intel/ARM and Linuxbrew; installs the `pyhttp` comman
 
 ```sh
 brew tap pyhttp2/pyhttp https://github.com/pyhttp2/pyhttp-releases
-brew install pyhttp2/pyhttp/pyhttp-app
+brew install pyhttp2/pyhttp/pyhttp
 ```
 
 On Linux, install the GTK webview bindings first or use `pyhttp --browser`.

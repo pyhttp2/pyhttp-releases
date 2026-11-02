@@ -2,7 +2,7 @@
 # (Python dependencies come from PyPI at install time).
 # Works on macOS (Intel and Apple Silicon) and Linuxbrew. macOS users who want
 # the app bundle instead: brew install --cask pyhttp2/pyhttp/pyhttp
-class PyhttpApp < Formula
+class Pyhttp < Formula
   include Language::Python::Virtualenv
 
   desc "Local API client and alternative to Postman, with runner, mocks and MCP"
