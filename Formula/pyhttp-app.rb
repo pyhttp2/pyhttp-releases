@@ -15,7 +15,8 @@ class PyhttpApp < Formula
   def install
     virtualenv_create(libexec, "python3.12")
     # install the checksummed sdist; dependencies come from PyPI
-    system libexec/"bin/pip", "install", buildpath.to_s
+    # (the venv is created --without-pip, so go through python -m pip)
+    system libexec/"bin/python", "-m", "pip", "install", buildpath.to_s
     bin.install_symlink libexec/"bin/pyhttp"
   end
 
