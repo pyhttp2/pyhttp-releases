@@ -1,4 +1,5 @@
-# The pyhttp CLI/app installed from PyPI into a Homebrew virtualenv.
+# The pyhttp CLI/app installed into a Homebrew virtualenv from the release sdist
+# (Python dependencies come from PyPI at install time).
 # Works on macOS (Intel and Apple Silicon) and Linuxbrew. macOS users who want
 # the app bundle instead: brew install --cask pyhttp2/pyhttp/pyhttp
 class PyhttpApp < Formula
@@ -14,7 +15,6 @@ class PyhttpApp < Formula
 
   def install
     virtualenv_create(libexec, "python3.12")
-    # install the checksummed sdist; dependencies come from PyPI
     # (the venv is created --without-pip, so go through python -m pip)
     system libexec/"bin/python", "-m", "pip", "install", buildpath.to_s
     bin.install_symlink libexec/"bin/pyhttp"
