@@ -1,6 +1,8 @@
 # pyhttp releases
 
-Download the latest pyhttp desktop app from the **Releases** page on the right, or from [pyhttp.com](https://pyhttp.com).
+> **pyhttp has a new home: [github.com/pyhttp2/pyhttp](https://github.com/pyhttp2/pyhttp)** — source code, issues and new [releases](https://github.com/pyhttp2/pyhttp/releases) all live there now. New releases are mirrored here so installs from before the move keep updating, and the Homebrew tap in this repository keeps working. The canonical tap is now [homebrew-pyhttp](https://github.com/pyhttp2/homebrew-pyhttp): `brew install --cask pyhttp2/pyhttp/pyhttp` with no tap step.
+
+Download the latest pyhttp desktop app from the **Releases** page on the right, from [pyhttp.com](https://pyhttp.com), or from the new [releases page](https://github.com/pyhttp2/pyhttp/releases).
 
 pyhttp is a local API client and alternative to Postman: requests, folders, environments, named bodies, tests and scripts, a collection runner, cookies, Postman/OpenAPI/HAR import and more. Everything stays on your machine.
 
